@@ -16,19 +16,24 @@ export const config = {
 
 // Convert Web Request to Node-style IncomingMessage
 async function toNodeRequest(request) {
-  const body = await request.arrayBuffer()
-  const stream = Readable.from(body)
+  const bodyArrayBuffer = await request.arrayBuffer()
+  const bodyBuffer = Buffer.from(bodyArrayBuffer) // ✅ Convert ArrayBuffer to Buffer
+  const stream = Readable.from([bodyBuffer]) // ✅ Wrap in array to make it iterable
+
   const req = Object.assign(stream, {
     headers: Object.fromEntries(request.headers),
     method: request.method,
     url: request.url,
   })
+
   return req
 }
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 })
+
+
 
 export async function POST(webRequest) {
     debugger
