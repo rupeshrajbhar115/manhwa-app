@@ -1,3 +1,4 @@
+
 import CustomButton from "./CustomButton";
 export default function Personal({ onNext }: { onNext: () => void }){
     return(<><div>

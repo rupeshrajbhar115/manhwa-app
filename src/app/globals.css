@@ -23,6 +23,7 @@
   font-family: 'Gang of Three';
   src: url('../../public/font/go3v2.ttf') format('truetype');
 }
+
 .desktop-view {
   display: none;
 }

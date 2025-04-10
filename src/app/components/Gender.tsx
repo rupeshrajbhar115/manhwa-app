@@ -1,5 +1,6 @@
 import CustomButton from "./CustomButton";
 export default function Gender({ onNext }: { onNext: () => void }){
+
     return(<><div>
         <h2>Gender</h2>
         

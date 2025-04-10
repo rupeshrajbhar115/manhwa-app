@@ -1,6 +1,7 @@
 import CustomButton from "./CustomButton";
 
 export default function HomePage({ onNext }: { onNext: () => void }) {
+
     
     return (
       <>
@@ -23,6 +24,7 @@ export default function HomePage({ onNext }: { onNext: () => void }) {
         </div>
         <div style={{display:'flex',flexDirection:'column',width:'282.12px',height:'397.64px', marginRight:'auto', marginLeft:'auto',border:'solid', marginTop:'30px'}}>
             <span style={{color:'white',marginRight:'auto', marginLeft:'auto',marginTop:'auto', fontWeight: 400, fontSize: '16px', textAlign:'center'}}>Transform your photos into Korean masterpieces!</span>
+
             <CustomButton id="nextBtn" text="Try now" onClick={onNext} />
         </div>
         <div style={{bottom:0, width:'100%', display:'flex', justifyContent:'space-between', height:'54px', padding:'20px 12px', marginTop:'auto'}}>
