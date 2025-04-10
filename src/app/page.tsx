@@ -8,42 +8,6 @@ import FlowManager from '@/app/components/FlowManager';
 
 export default function Home() {
 
-  // const router = useRouter();
-
-  // const handleClick = () => {
-  //   router.push('/HomePage'); // or whatever your route is
-  // };
-
-
-  // const [imageUrl, setImageUrl] = useState('')
-  // const [loading, setLoading] = useState(false)
-
-  // const handleUpload = async (e: React.FormEvent) => {
-  //   e.preventDefault()
-  //   const fileInput = e.currentTarget.querySelector('#image') as HTMLInputElement
-  //   const formData = new FormData()
-  //   if (fileInput.files?.[0]) {
-  //     formData.append('image', fileInput.files[0])
-  //     formData.append('username', 'Manikandan');
-  //     formData.append('gender', 'Male');
-  //     setLoading(true)
-  //     const res = await fetch('/api/manhwa', {
-  //       method: 'POST',
-  //       body: formData,
-  //     })
-  //     if (!res.ok) {
-  //       const errorData = await res.json().catch(() => ({}))
-  //       console.error('Server Error:', res.status, errorData)
-  //       alert(`Error ${res.status}: ${errorData.error || 'Unknown error'}`)
-  //       setLoading(false)
-  //       return
-  //     }
-  //     const data = await res.json()
-  //     setImageUrl(data.url)
-  //     setLoading(false)
-  //   }
-  // }
-
   return (
     <div>
       <FlowManager ></FlowManager>
