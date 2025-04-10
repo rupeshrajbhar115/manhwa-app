@@ -8,6 +8,7 @@ import Personal from './Personal';
 import FileUpload from './FileUpload';
 import Download from './Download';
 import Explore from './Explore';
+import { DesktopView } from './DesktopView';
 
 export default function FlowManager() {
     const [step, setStep] = useState(1);
@@ -35,6 +36,9 @@ export default function FlowManager() {
     }, []);
 
   return (
+    <>
+    <DesktopView></DesktopView>
+    <div className='mobile-view'>
     <div style={{minHeight:'100vh',display:'flex', flexDirection:'column'}}>
       {step === 1 && <HomePage onNext={goNext} />}
       {step === 2 && <Gender onNext={goNext}/>}
@@ -44,5 +48,9 @@ export default function FlowManager() {
       {step === 6 && <Download onNext={goNext} />}
       {step === 7 && <Explore />}
     </div>
+    </div>
+    
+    </>
+    
   );
 }

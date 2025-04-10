@@ -23,7 +23,30 @@
   font-family: 'Gang of Three';
   src: url('../../public/font/go3v2.ttf') format('truetype');
 }
+.desktop-view {
+  display: none;
+}
 
+.mobile-view {
+  display: block;
+}
+
+.desktop-text {
+  min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 769px) {
+  .desktop-view {
+    display: block;
+  }
+
+  .mobile-view {
+    display: none;
+  }
+}
 
 body {
   background: var(--background);
