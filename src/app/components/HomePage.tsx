@@ -1,15 +1,11 @@
 import CustomButton from "./CustomButton";
 
 export default function HomePage({ onNext }: { onNext: () => void }) {
-    function handleNext(){
-        console.log("Next Button");
-    }
+    
     return (
       <>
         <div>
-          <h2>Step 1</h2>
-          <button onClick={onNext}>Home Page Next →</button>
-  
+          <h2>Home Page</h2>
           <div
             style={{
               display: 'grid',
@@ -27,7 +23,7 @@ export default function HomePage({ onNext }: { onNext: () => void }) {
         </div>
         <div style={{display:'flex',flexDirection:'column',width:'282.12px',height:'397.64px', marginRight:'auto', marginLeft:'auto',border:'solid', marginTop:'30px'}}>
             <span style={{color:'white',marginRight:'auto', marginLeft:'auto',marginTop:'auto', fontWeight: 400, fontSize: '16px', textAlign:'center'}}>Transform your photos into Korean masterpieces!</span>
-            <CustomButton id="nextBtn" text="Try now" onClick={handleNext} />
+            <CustomButton id="nextBtn" text="Try now" onClick={onNext} />
         </div>
         <div style={{bottom:0, width:'100%', display:'flex', justifyContent:'space-between', height:'54px', padding:'20px 12px', marginTop:'auto'}}>
             <span style={{

@@ -1,6 +1,8 @@
+import CustomButton from "./CustomButton";
+
 export default function Avatar({ onNext }: { onNext: () => void }){
     return(<><div>
-        <h2>Step 3</h2>
-        <button onClick={onNext}>Avatar Next →</button>
+        <h2>Avatar</h2>
+        <CustomButton id="avatarbtn" text="Next" onClick={onNext}></CustomButton>
       </div></>);
 }

@@ -1,6 +1,7 @@
+import CustomButton from "./CustomButton";
 export default function Download({ onNext }: { onNext: () => void }){
     return(<><div>
-        <h2>Step 7</h2>
-        <button onClick={onNext}>Download Next →</button>
+        <h2>Download</h2>
+        <CustomButton id="downloadbtn" text="Next" onClick={onNext}></CustomButton>
       </div></>);
 }
